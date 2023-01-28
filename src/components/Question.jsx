@@ -11,7 +11,7 @@ export default function Question(props) {
 
     useEffect(() => {
         setRandomArr(randArr());
-    }, [props.question])
+    }, [props.ques.question])
 
     let decodedQuestion = props.ques.question.replace(/&quot;/g, '"');
     decodedQuestion = decodedQuestion.replace(/&#039;/, "'");
