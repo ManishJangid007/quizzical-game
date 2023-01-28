@@ -18,7 +18,7 @@ export default function Question(props) {
 
     return (
         <div className="question">
-            <h3>{decodedQuestion}</h3>
+            <h3>{cleanText(props.ques.question)}</h3>
             <div className="options">
                 {props.gameOver ?
                     props.ques.correct_answer === props.ques.selected ?
@@ -27,7 +27,7 @@ export default function Question(props) {
                                 key={i}
                                 className={`option ${options[i] === props.ques.correct_answer ? 'correct' : 'unselected'}`}
                             >
-                                {options[i].replace(/&quot;/g, '"')}
+                                {cleanText(options[i])}
                             </button>) :
                         randomArr.map(
                             i => <button
@@ -37,7 +37,7 @@ export default function Question(props) {
                                             'wrong' : 'unselected'
                                     }`}
                             >
-                                {options[i].replace(/&quot;/g, '"')}
+                                {cleanText(options[i])}
                             </button>)
                     :
                     randomArr.map(
@@ -45,7 +45,7 @@ export default function Question(props) {
                             key={i}
                             className={`option ${options[i] === props.ques.selected ? "selected" : "unselected"}`}
                             onClick={() => props.select(props.ques.question, options[i])}>
-                            {options[i].replace(/&quot;/g, '"')}
+                            {cleanText(options[i])}
                         </button>
                     )
                 }
@@ -53,6 +53,12 @@ export default function Question(props) {
             <hr />
         </div>
     )
+}
+
+function cleanText(text) {
+    text = text.replace(/&quot;/g, '"');
+    text = text.replace(/&#039;/g, "'");
+    return text;
 }
 
 function randArr() {
