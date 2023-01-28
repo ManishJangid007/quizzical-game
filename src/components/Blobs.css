@@ -1,0 +1,27 @@
+.blobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.blob1 {
+    background-image: url('../assets/blob1.png');
+    width: 158px;
+    height: 140px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+.blob2 {
+    background-image: url('../assets/blob2.png');
+    width: 158px;
+    height: 118px;
+    background-repeat: no-repeat;
+    margin-right: auto;
+}

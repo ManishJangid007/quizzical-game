@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+    background-color:#F5F7FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Karla', sans-serif;
+}
+
+.game {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game--card {
+    min-height: 400px;
+    min-width: 400px;
+    margin: 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}

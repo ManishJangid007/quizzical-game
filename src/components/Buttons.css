@@ -1,0 +1,42 @@
+.btn--div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.quit--btn {
+    border: none;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 0.9em;
+    line-height: 16px;
+    text-align: center;
+    color: rgb(0, 157, 255);
+}
+
+.default--btn {
+    width: 125px;
+    height: 40px;
+    background: #4D5B9E;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #F5F7FB;
+}
+
+.btn--div p {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    margin: 0px 3px;
+    color: #293264;
+
+}
