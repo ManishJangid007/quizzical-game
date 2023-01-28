@@ -20,8 +20,6 @@ export default function App() {
     updateQuestions();
   }, [0])
 
-  console.log(questions);
-
   function updateQuestions() {
     fetch("https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple")
       .then(res => res.json())

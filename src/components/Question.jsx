@@ -13,9 +13,12 @@ export default function Question(props) {
         setRandomArr(randArr());
     }, [props.question])
 
+    let decodedQuestion = props.ques.question.replace(/&quot;/g, '"');
+    decodedQuestion = decodedQuestion.replace(/&#039;/, "'");
+
     return (
         <div className="question">
-            <h3>{props.ques.question.replace(/&quot;/g, '"')}</h3>
+            <h3>{decodedQuestion}</h3>
             <div className="options">
                 {props.gameOver ?
                     props.ques.correct_answer === props.ques.selected ?
